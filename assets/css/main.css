@@ -935,7 +935,7 @@ section,
   position: absolute;
   z-index: -1;
   opacity: 0.3;
-  background-image: url(/assets/img/plise-sineklik-1.png);
+  background-image: url(../assets/img/plise-sineklik-1.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;

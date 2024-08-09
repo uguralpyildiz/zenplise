@@ -326,7 +326,7 @@ h6 {
   .navmenu a:focus {
     color: var(--nav-color);
     padding: 18px 15px;
-    font-size: 16px;
+    font-size: 14px;
     font-family: var(--nav-font);
     font-weight: 400;
     display: flex;
@@ -426,7 +426,16 @@ h6 {
     visibility: visible;
   }
 }
+@media (max-width: 1201px) {
 
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1200px !important;
+  }
+}
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
@@ -947,6 +956,50 @@ section,
   font-size: 48px;
   font-weight: 700;
 }
+.contact-button-bigger{
+  color: #fff !important;
+  background: rgb(255, 132, 0);
+  font-size: 14px !important;
+  border-radius: 5px;
+  padding:10px 15px !important;
+}
+
+.pulse {
+ 
+  background-color: #ff8400;
+  border-radius: 5px;
+  position: relative;
+  animation: animate 3s linear infinite
+}
+
+.pulse i {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #fff;
+  height: 100%;
+  cursor: pointer
+}
+
+@keyframes animate {
+  0% {
+    box-shadow: 0 0 0 0 rgb(255,132, 74, 0.7), 0 0 0 0 rgb(255,132, 74, 0.7)
+  }
+
+  40% {
+    box-shadow: 0 0 0 50px rgb(255,132, 74, 0), 0 0 0 0 rgb(255,132, 74, 0.7)
+  }
+
+  80% {
+    box-shadow: 0 0 0 50px rgb(255,132, 74, 0), 0 0 0 30px rgb(255,132, 74, 0)
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgb(255,132, 74, 0), 0 0 0 30px rgb(255,132, 74, 0)
+  }
+}
 
 .hero h2 .underlight {
  
@@ -974,16 +1027,35 @@ section,
 }
 
 @media (max-width: 768px) {
+  .header .logo img{
+    margin-right: 10px;
+    max-width: 100%;
+    max-height: 50px;
+  }
   .hero h2 {
     font-size: 32px;
   }
 }
-
+.btn-get-started-out{
+  color: #fff;
+  font-weight: 800;
+  background: #00000085;
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 16px;
+  display: inline-block;
+  padding: 8px 40px;
+  border-radius: 5px;
+  margin: 8px;
+  transition: 0.5s;
+  border: 2px solid #00000015;
+}
 .hero .btn-get-started {
   color: var(--contrast-color);
   background: var(--accent-color);
   font-family: var(--heading-font);
   font-weight: 500;
+  margin: 8px;
   font-size: 16px;
   display: inline-block;
   padding: 8px 40px;
@@ -995,7 +1067,42 @@ section,
 .hero .btn-get-started:hover {
   background-color: color-mix(in srgb, var(--accent-color) 90%, white 15%);
 }
-
+.wp-ab a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 80px;
+  right: 10px;
+  height: 65px;
+  width: 65px;
+  font-size: 38px;
+  z-index: 999;
+  background-color: #24CC63;
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: 0 0 15px #00000020;
+  animation: idle 1.3s ease infinite;
+  text-decoration: none;
+}
+@keyframes idle {
+  0% {
+      bottom: 80px;
+    }
+  
+    50% {
+      bottom: 75px;
+    }
+  
+    100% {
+      bottom: 80px;
+    }
+}
+.btn-get-started-out:hover {
+  background-color: #fff;
+  border-color: #000;
+  color: #000;
+}
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
@@ -1202,10 +1309,10 @@ section,
 .call-to-action .container {
   padding-top: 80px;
   padding-bottom: 80px;
-  border-radius: 15px;
+  border-radius: 0px;
   overflow: hidden;
   position: relative;
-  clip-path: inset(0 round 15px);
+  clip-path: inset(0 round 0px);
 }
 
 .call-to-action .container img {

@@ -1475,6 +1475,16 @@ section,
   margin-bottom: 0;
   padding-right: 50px;
 }
+.portfolio-info{
+  display: flex;
+  flex-direction: column;
+  
+}
+.portfolio-link-href{
+  background: #00000010;
+  padding: 8px;
+  border-radius: 5px;
+}
 
 .portfolio .portfolio-content:hover img {
   transform: scale(1.1);

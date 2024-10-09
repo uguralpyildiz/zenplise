@@ -168,26 +168,56 @@
 
   <main class="main">
 
+    <style>
+      .hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+#hero .container {
+    position: relative;
+    background: #ffffff50;
+    backdrop-filter: blur(5px);
+    z-index: 1; /* Metni videonun üstünde görünür kılmak için */
+}
+
+    </style>
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
-
+      <video autoplay muted loop class="background-video">
+        <source src="SİTEYE.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-delay="100">
             <h2><span> </span><span class="underlight">Değişim</span> <span> Zamanı</span></h2>
             <p>
-              Siz de plise sineklik ve plise perde ihtiyaçlarınızda kaliteli, güvenilir ve müşteri odaklı bir hizmet almak için bizi
+              Siz de plise sineklik ve plise perde ihtiyaçlarınızda kaliteli, güvenilir ve müşteri odaklı bir hizmet almak
+              için bizi
               tercih edin. Evinize konfor ve şıklık katmak bizim işimiz!
-
-
             </p>
             <a href="#about" class="btn-get-started">Hadi Başlayalım</a>
-            <a href="ZENPLİSE 2024 Baskı_compressed.pdf" target="_blank" class="btn-get-started-out"><i class="bi bi-book"></i> Online Katalog</a>
+            <a href="ZENPLİSE 2024 Baskı_compressed.pdf" target="_blank" class="btn-get-started-out"><i
+                class="bi bi-book"></i> Online Katalog</a>
           </div>
         </div>
       </div>
-
     </section><!-- /Hero Section -->
+
 
     <!-- About Section -->
     <section id="about" class="about section" style="background-color: #fffFFF;

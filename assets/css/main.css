@@ -2041,3 +2041,9 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+.header .container{
+  max-width:100% !important;
+  width:100% !important;
+  min-width:100% !important;
+}
